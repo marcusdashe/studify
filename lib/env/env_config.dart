@@ -6,7 +6,7 @@ class EnvConfig {
     await dotenv.load(fileName: '.env');
   }
 
-  static String get studifyGeminiAPIKey => dotenv.env['STUDIFY_GEMINI_API_KEY'] ?? "";
+  static String get studifyGeminiAPIKey => dotenv.env['STUDIFY_GEMINI_API_KEY'] ?? "AIzaSyB1w1dCjPYZQT9U2NbzV9Ka8P_Fzh5T2WE";
   static var model = GenerativeModel(model: 'gemini-2.5-flash', apiKey: studifyGeminiAPIKey);
 
 }
