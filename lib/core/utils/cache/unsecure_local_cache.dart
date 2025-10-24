@@ -4,13 +4,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 class LocalCache {
   SharedPreferences? _prefs;
 
-
   Future<void> initialize() async {
     _prefs = await SharedPreferences.getInstance();
   }
 
   //  Singleton pattern for the service
-
   static final LocalCache _instance = LocalCache._internal();
 
   factory LocalCache(){

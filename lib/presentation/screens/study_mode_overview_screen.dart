@@ -10,7 +10,6 @@ import '../widgets/circular_back_button.dart';
 class StudyModeOverviewScreen extends StatelessWidget {
   static const routeName = '/study-mode-overview-screen';
 
-  // Example data passed from the previous screen
   final String quizTitle;
 
   const StudyModeOverviewScreen({
@@ -46,9 +45,8 @@ class StudyModeOverviewScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 16),
 
-            // Placeholder for the small icon/logo (top left)
             const Text(
-              'Quiz', // Placeholder text for the icon area
+              'Quiz',
               style: TextStyle(
                 fontSize: 12,
                 color: Color(0xFF9E9E9E),

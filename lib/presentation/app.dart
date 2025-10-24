@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:studify_flutter_challenge/presentation/screens/file_management_screen.dart';
 import 'package:studify_flutter_challenge/presentation/screens/flash_screen.dart';
 import 'package:studify_flutter_challenge/presentation/screens/quiz_screen.dart';
-import 'package:studify_flutter_challenge/presentation/screens/study_mode_overview_screen.dart';
-
 import '../core/utils/cache/unsecure_local_cache.dart';
 
 class StudifyApp extends StatelessWidget {
@@ -66,7 +64,7 @@ class _AppStartControllerState extends State<AppStartController>{
   @override
   Widget build(BuildContext context){
     if(!_initialized){
-      return const FileManagementScreen(); // Show Welcome while checking first launch status
+      return const FileManagementScreen();
     }
     return _isFirstLaunch ? const FlashScreen() : const FileManagementScreen();
   }

@@ -4,7 +4,7 @@ import '../../data/models/file_model.dart';
 
 class FileItem extends StatelessWidget {
   final FileModel file; // Use the entire model now
-  final VoidCallback onTap; // New: Callback for tapping
+  final VoidCallback onTap;
 
   const FileItem({
     super.key,
@@ -14,7 +14,7 @@ class FileItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell( // Use InkWell to make the item clickable
+    return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(12),
       child: Container(
@@ -38,7 +38,7 @@ class FileItem extends StatelessWidget {
               ),
               child: Center(
                 child: Image.asset(
-                  file.iconPath, // Use file.iconPath
+                  file.iconPath,
                   width: 40,
                   height: 40,
                 ),
@@ -64,7 +64,7 @@ class FileItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    file.fileName, // Use file.fileName
+                    file.fileName,
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
@@ -75,7 +75,7 @@ class FileItem extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    file.date, // Use file.date
+                    file.date,
                     style: const TextStyle(
                       fontSize: 12,
                       color: Color(0xFF9E9E9E),

@@ -16,5 +16,5 @@ class StudifyColors {
   static const blue = Color(0xFFe5e7eb);
   static const studyModeIconBg = Color(0xFFFFECE4); // Light orange background for Study mode
   static const singleQuizIconBg = Color(0xFFFFE4EB); // Light pink background for Single Quiz
-  static const competitionIconBg = Color(0xFFE4F3FF); //
+  static const competitionIconBg = Color(0xFFE4F3FF);
 }

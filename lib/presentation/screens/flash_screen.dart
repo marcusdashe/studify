@@ -10,7 +10,7 @@ import 'file_management_screen.dart';
 class FlashScreen extends StatefulWidget {
   static const routeName = '/flash-screen';
 
-  const FlashScreen({Key? key}) : super(key: key);
+  const FlashScreen({super.key});
 
   @override
   State<FlashScreen> createState() => _FlashScreenState();
@@ -288,8 +288,8 @@ class _FlashScreenState extends State<FlashScreen>
                   const Text(
                     "Powered by BuildPrize",
                     style: TextStyle(
-                      fontSize: 13,
-                      color: StudifyColors.textPrimary,
+                      fontSize: 12,
+                      color: StudifyColors.textSecondary,
                       fontWeight: FontWeight.w600,
                       letterSpacing: 0.5,
                     ),
@@ -303,142 +303,3 @@ class _FlashScreenState extends State<FlashScreen>
     );
   }
 }
-
-//
-// class SplashScreen extends StatefulWidget {
-//   const SplashScreen({Key? key}) : super(key: key);
-//
-//   @override
-//   State<SplashScreen> createState() => _SplashScreenState();
-// }
-//
-// class _SplashScreenState extends State<SplashScreen>
-//     with TickerProviderStateMixin {
-//   late AnimationController _animationController;
-//   late Animation<double> _sizeAnimation;
-//   late Animation<double> _opacityAnimation;
-//   late SettingCubit _settingCubit;
-//
-//   @override
-//   void initState() {
-//     super.initState();
-//     _settingCubit = BlocProvider.of<SettingCubit>(context);
-//
-//     _animationController = AnimationController(
-//       vsync: this,
-//       duration: const Duration(seconds: 3),
-//     );
-//
-//     _sizeAnimation = Tween<double>(begin: 60.0, end: 150.0).animate(
-//       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
-//     );
-//
-//     _opacityAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
-//       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
-//     );
-//
-//     // _fontSizeAnimation = Tween<double>(begin: 0.0, end: 28.0).animate(
-//     //   CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
-//     // );
-//
-//     _startAnimations();
-//   }
-//
-//   Future<void> _startAnimations() async {
-//     // debugPrint("Halleluyah!!!!!");
-//     // await _settingCubit.appSettings();
-//     await Future.delayed(const Duration(seconds: 2));
-//
-//     _animationController.forward();
-//
-//     await Future.delayed(const Duration(seconds: 2));
-//
-//     Navigator.of(context).pushReplacementNamed(SagamySignInScreen.routeName);
-//   }
-//
-//   @override
-//   void dispose() {
-//     _animationController.dispose();
-//     super.dispose();
-//
-//   }
-//
-//   @override
-//   void setState(fn) {
-//     if (mounted) super.setState(fn);
-//   }
-//
-//   @override
-//   Widget build(BuildContext context) {
-//
-//     SystemChrome.setSystemUIOverlayStyle(
-//        SystemUiOverlayStyle(
-//         statusBarColor: SagamyBrandColors.splashColor.withOpacity(0.5),
-//         statusBarIconBrightness: Brightness.light,
-//       ),
-//     );
-//
-//     final h = MediaQuery.of(context).size.height, w = MediaQuery.of(context).size.width;
-//
-//     return SafeArea(
-//       child: Scaffold(
-//         body: SizedBox(
-//           height: h,
-//           width: w,
-//           child: Stack(
-//             alignment: Alignment.center,
-//             children: [
-//               Positioned(
-//                   child: Image.asset(
-//                     SagamyImagePaths.bgFirstImage,
-//                     fit: BoxFit.cover,
-//                   )
-//               ),
-//
-//               // Transparent Layer
-//               Positioned(
-//                   child: Container(
-//                     color:  SagamyBrandColors.standardBgColor,
-//                   )
-//               ),
-//               AnimatedBuilder(
-//                 animation: _animationController,
-//                 builder: (context, child) {
-//                   return SizedBox(
-//                     height: _sizeAnimation.value,
-//                     width: _sizeAnimation.value,
-//                     child: Opacity(
-//                       opacity: _opacityAnimation.value,
-//                       child: Image.asset(
-//                         SagamyImagePaths.logoImage,
-//                         width: _sizeAnimation.value,
-//                         height: _sizeAnimation.value,
-//                       ),
-//                     ),
-//                   );
-//                 },
-//               ),
-//               Positioned(
-//                   bottom: 50,
-//                   child: Row(
-//                     mainAxisAlignment: MainAxisAlignment.center,
-//                     children: <Widget>[
-//                       SizedBox(
-//                         width: 25, // Adjust width and height as needed
-//                         height: 25,
-//                         child: Image.asset(SagamyImagePaths.logoImageSagamy),
-//                       ),
-//                       const SizedBox(width: 7),
-//                       const Text("Powered by Sagamy", style: TextStyle(fontSize: 12, color: SagamyBrandColors.yellowColor, fontWeight: FontWeight.w500),)
-//                     ],
-//                   )
-//               )
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-

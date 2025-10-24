@@ -1,5 +1,3 @@
-
-
 import 'package:studify_flutter_challenge/data/models/quiz_option_model.dart';
 
 class QuizQuestion {

@@ -18,12 +18,6 @@ class StudifyAppWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StudifyApp();
-    //   MultiBlocProvider(
-    //   providers: [
-    //     // BlocProvider<TaskCubit>(create: (context) => TaskCubit(),),
-    //   ],
-    //   child: const StudifyApp(),
-    // );
   }
 }
 

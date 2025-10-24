@@ -24,7 +24,6 @@ class QuizSelectionDialog extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 16.0),
         child: Row(
           children: [
-            // Icon with Background Circle
             Container(
               width: 48,
               height: 48,
@@ -67,12 +66,11 @@ class QuizSelectionDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // We use a Column inside a Container to create the rounded-corner card look
-    // and an outer Padding to center the close button below it.
+
     return Padding(
-      padding: const EdgeInsets.only(bottom: 20.0), // Space for the close button
+      padding: const EdgeInsets.only(bottom: 20.0),
       child: Column(
-        mainAxisSize: MainAxisSize.min, // Keep column size minimal
+        mainAxisSize: MainAxisSize.min,
         children: [
           // The main dialog box content
           Container(
@@ -119,7 +117,13 @@ class QuizSelectionDialog extends StatelessWidget {
                   iconBackgroundColor: StudifyColors.singleQuizIconBg,
                   onTap: () {
                     Navigator.pop(context); // Close dialog
-                    // TODO: Implement navigation to Single Quiz
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const StudyModeOverviewScreen(
+                          quizTitle: 'Assembly Programming Guide',
+                        ),
+                      ),
+                    );
                   },
                 ),
                 // Divider(color: Colors.grey.shade200, height: 1),
@@ -131,7 +135,13 @@ class QuizSelectionDialog extends StatelessWidget {
                   iconBackgroundColor: StudifyColors.competitionIconBg,
                   onTap: () {
                     Navigator.pop(context); // Close dialog
-                    // TODO: Implement navigation to Competition Quiz
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const StudyModeOverviewScreen(
+                          quizTitle: 'Assembly Programming Guide',
+                        ),
+                      ),
+                    );
                   },
                 ),
               ],

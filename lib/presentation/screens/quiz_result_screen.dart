@@ -187,7 +187,6 @@ class QuizResultScreen extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  // "You crushed it!" text
                   const Text(
                     'You crushed it!',
                     style: TextStyle(

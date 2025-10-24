@@ -1,14 +1,9 @@
-// ============ MODELS ============
-
-
-
-
-// ============ QUIZ SCREEN ============
 
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:studify_flutter_challenge/presentation/screens/quiz_result_screen.dart';
 
+import '../../core/constants/studify_image_paths.dart';
 import '../../data/models/quiz_option_model.dart';
 import '../../data/models/quiz_question_model.dart';
 import '../widgets/circular_back_button.dart';
@@ -568,19 +563,37 @@ class _QuizScreenState extends State<QuizScreen> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 16),
-            child: Row(
-              children: [
-                Text(
-                  '$_score',
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xFF212121),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              decoration: BoxDecoration(
+                color: const Color(0xFFF5F5F5),
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.05),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
                   ),
-                ),
-                const SizedBox(width: 4),
-                const Icon(Icons.diamond, color: Color(0xFF7C3AED), size: 20),
-              ],
+                ],
+              ),
+              child: Row(
+                children: [
+                  Text(
+                    '$_score',
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF212121),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Image.asset(
+                    StudifyImagePaths.diamond,
+                    width: 16,
+                    height: 16,
+                  ),
+                ],
+              ),
             ),
           ),
         ],
